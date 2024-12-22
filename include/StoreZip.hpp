@@ -15,6 +15,7 @@ namespace CNNX {
         ~StoreZipReader() = default;
 
         int Open(const std::string &ZipFilePath);
+
     };
 }
 #endif //CNNX_STOREZIP_HPP
