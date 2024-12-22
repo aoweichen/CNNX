@@ -32,3 +32,12 @@
 *.app
 /cmake-build-debug/
 /.idea/
+/.idea/
+/.idea/inspectionProfiles/
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
+/.idea/CNNX.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
