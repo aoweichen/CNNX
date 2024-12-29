@@ -13,34 +13,34 @@
 #include <concepts>
 #include <memory>
 
-namespace cnnx::zippy {
-    template<typename T>
-    concept Readable = requires(T t){
-        { t.read(std::declval<size_t>()) }->std::same_as<std::optional<std::vector<char>>>;
-    };
-
-    template<typename T>
-    concept Writable = requires(T t, std::span<const char> data){
-        { t.write(data) }->std::same_as<std::optional<std::string>>;
-    };
-}
+//namespace cnnx::zippy {
+//    template<typename T>
+//    concept Readable = requires(T t){
+//        { t.read(std::declval<size_t>()) }->std::same_as<std::optional<std::vector<char>>>;
+//    };
+//
+//    template<typename T>
+//    concept Writable = requires(T t, std::span<const char> data){
+//        { t.write(data) }->std::same_as<std::optional<std::string>>;
+//    };
+//}
 
 namespace cnnx::zippy {
     class IFileHandle {
     public:
         virtual ~IFileHandle() = default;
 
-        virtual std::optional<std::string> open(const std::string &path, const std::string &mode) = 0;
+        [[maybe_unused]] virtual std::optional<std::string> open(const std::string &path, const std::string &mode) = 0;
 
-        virtual void close() noexcept = 0;
+        [[maybe_unused]] virtual void close() noexcept = 0;
 
-        [[nodiscard]] virtual bool is_open() const noexcept = 0;
+        [[maybe_unused]] [[nodiscard]] virtual bool is_open() const noexcept = 0;
 
-        [[nodiscard]] virtual std::optional<std::vector<char>> read(const size_t &size) const = 0;
+        [[maybe_unused]] [[nodiscard]] virtual std::optional<std::vector<char>> read(const size_t &size) const = 0;
 
-        [[nodiscard]] virtual std::optional<std::string> write(std::span<const char> data) const = 0;
+        [[maybe_unused]] [[nodiscard]] virtual std::optional<std::string> write(std::span<const char> data) const = 0;
 
-        [[nodiscard]] virtual std::optional<size_t> size() const = 0;
+        [[maybe_unused]] [[nodiscard]] virtual std::optional<size_t> size() const = 0;
     };
 }
 

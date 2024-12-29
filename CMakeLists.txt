@@ -11,10 +11,15 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 # 添加源文件
 set(SOURCES
         main.cpp
-        source/IZIP/StoreZip.cpp
-        include/IZIP/StoreZip.hpp
-        include/IZIP/FileHandle.hpp
-        source/IZIP/FileHandle.cpp
+#        source/StoreZip.cpp
+#        include/StoreZip.hpp
+#        include/IZIP/FileHandle.hpp
+#        source/IZIP/FileHandle.cpp
+#        include/IZIP/ZipParser.hpp
+#        source/IZIP/ZipParser.cpp
+#        include/IZIP/ZipCompressor.hpp
+#        source/IZIP/ZipCompressor.cpp
+        include/IZIP/ZipStruct.hpp
 )
 
 # 创建可执行文件
