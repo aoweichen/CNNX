@@ -7,14 +7,14 @@
 
 #include <string>
 
-namespace CNNX {
+namespace cnnx {
     class StoreZipReader {
     public:
         StoreZipReader() = default;
 
         ~StoreZipReader() = default;
 
-        int Open(const std::string &ZipFilePath);
+        [[maybe_unused]] int Open(const std::string &ZipFilePath);
     };
 }
 #endif //CNNX_STOREZIP_HPP
