@@ -10,14 +10,15 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # 添加源文件
 set(SOURCES
-        source/StoreZip.cpp
-        include/StoreZip.hpp
         main.cpp
+        source/IZIP/StoreZip.cpp
+        include/IZIP/StoreZip.hpp
+        include/IZIP/FileHandle.hpp
+        source/IZIP/FileHandle.cpp
 )
 
 # 创建可执行文件
-add_executable(main ${SOURCES}
-        include/StoreZip.hpp)
+add_executable(main ${SOURCES})
 
 # 更现代的方式：使用 target_include_directories
 target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/include)
